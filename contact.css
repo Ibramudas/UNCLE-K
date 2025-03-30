@@ -105,3 +105,24 @@ input[type="submit"] {
         transform: translateY(0);
     }
 }
+@media (max-width: 768px) {
+    .navbar {
+      position: relative;
+    }
+    .navbar-toggler {
+      display: block;
+    }
+    .navbar-collapse {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #f7f7f7;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+    .navbar-collapse.show {
+      display: block;
+    }
+  }
