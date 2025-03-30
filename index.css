@@ -1,5 +1,3 @@
-Global Styles
-                
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,38 +5,120 @@ Global Styles
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f7f7f7;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease;
+    background-image: linear-gradient(to bottom, #f9f9f9, #fff);
+}
+
+a {
+    text-decoration: none;
+    color: #337ab7;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+a:hover {
+    color: #23527c;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #337ab7;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+a:hover::before {
+    transform: scaleX(1);
+}
+
+::selection {
+    background-color: #337ab7;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f9f9f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #337ab7;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #23527c;
 }
 
 
 Navbar Styles
 
 .navbar {
-    background-color: #4CAF50;
+    background-color: #337ab7;
     color: #fff;
     padding: 1rem;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
+    position: relative;
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
 }
 
 .navbar-brand {
+    color: #fff;
     font-size: 1.5rem;
     font-weight: bold;
     margin-right: 1rem;
+    transition: color 0.2s ease;
+}
+
+.navbar-brand:hover {
+    color: #ccc;
 }
 
 .navbar-nav {
-    margin-left: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-item {
-    margin-right: 20px;
+    margin-right: 2rem;
+    transition: transform 0.2s ease;
+}
+
+.nav-item:hover {
+    transform: translateY(-5px);
 }
 
 .nav-link {
     color: #fff;
+    font-size: 1.2rem;
     transition: color 0.2s ease;
 }
 
@@ -50,584 +130,712 @@ Navbar Styles
 Hero Section Styles
 
 .hero {
-    background-image: url('hh.jpg');
+    background-image: linear-gradient(to bottom, #337ab7, #23527c);
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    color: #fff;
+    position: relative;
+    transition: background-color 0.5s ease;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
 }
 
 .headline {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
+}
+
+.headline:hover {
+    transform: scale(1.1);
 }
 
 .subheading {
-    font-size: 24px;
-    margin-bottom: 40px;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease;
 }
 
-.call-to-action-button {
-    background-color: #4CAF50;
+.subheading:hover {
+    transform: scale(1.1);
+}
+
+
+.hero-btn {
+    background-color: #337ab7;
     color: #fff;
-    padding: 20px 40px;
     border: none;
-    border-radius: 5px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
     cursor: pointer;
+    transition: background-color 0.5s ease;
+    position: relative;
 }
 
-
-.call-to-action-button:hover {
-    background-color: #3e8e41;
+.hero-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    transition: transform 0.5s ease;
 }
 
+.hero-btn:hover::before {
+    transform: scale(1.1);
+}
 
-Main Section Styles
+.hero-btn:hover {
+    background-color: #23527c;
+}
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 2rem;
+    transition: background-color 0.5s ease;
+    background-color: #f9f9f9;
 }
 
 section {
-    background-color: #f7f7f7;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    position: relative;
 }
 
-h4 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #666;
-}
-
-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-
-Footer Styles
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    clear: both;
-}
-
-.copyright {
-    background-color: #3e8e41;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    clear: both;
-}
-
-.social-media-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.social-media-links li {
-    margin-right: 20px;
-}
-
-.social-media-links a {
-    color: #337ab7;
-    transition: color 0.2s ease;
-}
-
-.social-media-links a:hover {
-    color: #23527c;
-}
-
-
-
-@media (max-width: 768px) {
-    .social-media-links {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .social-media-links li {
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .social-media-links {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .social-media-links li {
-        margin-bottom: 10px;
-    }
-}
-
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.col-md-4 {
-    flex-basis: 32%;
-}
-
-.col-md-4 img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    color: #333;
-
-}
-h1 {
-    font-size: 36px;
-}
-
-h2 {
-    font-size: 30px;
-}
-
-h3 {
-    font-size: 24px;
-}
-
-h4 {
-    font-size: 18px;
-}
-
-h5 {
-    font-size: 16px;
-}
-
-h6 {
-    font-size: 14px;
-}
-
-p {
-    font-size: 16px;
-    color: #666;
-}
-
-a {
-    color: #337ab7;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #23527c;
-}
-
-button {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #3e8e41;
-}
-.input-field {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.input-field:focus {
-    border-color: #aaa;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.dropdown-menu {
+section::before {
+    content: '';
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    padding: 10px;
-    z-index: 1000;
-}
-.dropdown-menu li {
-    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    transition: transform 0.5s ease;
 }
 
-.dropdown-menu li a {
-    color: #337ab7;
-    transition: color 0.2s ease;
+section:hover::before {
+    transform: scale(1.1);
 }
 
-.dropdown-menu li a:hover {
-    color: #23527c;
+section:hover {
+    transform: translateY(-10px);
 }
 
-/* Responsive Design */
+h4 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    transition: transform 0.5s ease;
+}
+
+h4:hover {
+    transform: scale(1.1);
+}
+
+p {
+    margin-bottom: 2rem;
+    transition: transform 0.5s ease;
+}
+
+p:hover {
+    transform: scale(1.1);
+}
+
+img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    transition: transform 0.5s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
 
 @media (max-width: 768px) {
-    .col-md-4 {
-        flex-basis: 50%;
+    .navbar {
+        padding: 0.5rem;
     }
-}
 
-@media (max-width: 480px) {
-    .col-md-4 {
-        flex-basis: 100%;
+    .navbar-brand {
+        font-size: 1.2rem;
     }
+
+    .nav-item {
+        margin-right: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+
     .hero {
         height: 50vh;
     }
-    .hero .headline {
-        font-size: 24px;
+
+    .headline {
+        font-size: 2rem;
     }
-    .hero .subheading {
-        font-size: 18px;
+
+    .subheading {
+        font-size: 1.2rem;
     }
 }
 
-@media (max-width: 320px) {
-.hero .headline {
-    font-size: 18px;
-}
-.hero .subheading {
-    font-size: 14px;
-}
-}
-/* Add a transition effect to all links */
-a {
-    transition: all 0.2s ease;
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.2rem;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .nav-item {
+        margin-right: 0.5rem;
+    }
+
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        height: 30vh;
+    }
+
+    .headline {
+        font-size: 1.5rem;
+    }
+
+   
+    
+    @media (max-width: 576px) {
+        .subheading {
+            font-size: 1rem;
+        }
+    
+        .hero-btn {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+        }
+    
+        main {
+            padding: 1rem;
+        }
+    
+        section {
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+    
+        h4 {
+            font-size: 1.2rem;
+        }
+    
+        p {
+            font-size: 0.8rem;
+        }
+    
+        img {
+            height: 15rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .navbar {
+            padding: 0.1rem;
+        }
+    
+        .navbar-brand {
+            font-size: 0.8rem;
+        }
+    
+        .nav-item {
+            margin-right: 0.2rem;
+        }
+    
+        .nav-link {
+            font-size: 0.6rem;
+        }
+    
+        .hero {
+            height: 20vh;
+        }
+    
+        .headline {
+            font-size: 1.2rem;
+        }
+    
+        .subheading {
+            font-size: 0.8rem;
+        }
+    
+        .hero-btn {
+            padding: 0.2rem 0.5rem;
+            font-size: 0.8rem;
+        }
+    
+        main {
+            padding: 0.5rem;
+        }
+    
+        section {
+            padding: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+    
+        h4 {
+            font-size: 1rem;
+        }
+    
+        p {
+            font-size: 0.6rem;
+        }
+    
+        img {
+            height: 10rem;
+        }
+    }
+    
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+    
+        100% {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+    
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    @keyframes slideIn {
+        0% {
+            transform: translateY(-100px);
+        }
+    
+        100% {
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes slideOut {
+        0% {
+            transform: translateY(0);
+        }
+    
+        100% {
+            transform: translateY(-100px);
+        }
+    }
+    
+    .fadeIn {
+        animation: fadeIn 1s ease-in-out;
+    }
+    
+    .fadeOut {
+        animation: fadeOut 1s ease-in-out;
+    }
+    
+    .slideIn {
+        animation: slideIn 1s ease-in-out;
+    }
+    
+
+.slideOut {
+    animation: slideOut 1s ease-in-out;
 }
 
-/* Remove the default margin from the body */
-body {
-    margin: 0;
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
 }
 
-/* Add a default font size to the body */
-body {
-    font-size: 16px;
+@keyframes scaleDown {
+    0% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.scaleUp {
+    animation: scaleUp 0.5s ease-in-out;
+}
+
+.scaleDown {
+    animation: scaleDown 0.5s ease-in-out;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-item {
+        margin-right: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .headline {
+        font-size: 2rem;
+    }
+
+    .subheading {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        height: 30vh;
+    }
+
+    .headline {
+        font-size: 1.5rem;
+    }
+
+@media (max-width: 576px) {
+    .subheading {
+        font-size: 1rem;
+    }
+
+    .hero-btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    img {
+        height: 15rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.2rem;
+    }
+
+    .navbar-brand {
+        font-size: 0.8rem;
+    }
+
+    .nav-item {
+        margin-right: 0.2rem;
+    }
+
+    .nav-link {
+        font-size: 0.6rem;
+    }
+
+    .hero {
+        height: 20vh;
+    }
+
+    .headline {
+        font-size: 1.2rem;
+    }
+
+    .subheading {
+        font-size: 0.8rem;
+    }
+
+    .hero-btn {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    main {
+        padding: 0.5rem;
+    }
+
+    section {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.6rem;
+    }
+
+    img {
+        height: 10rem;
+    }
+}
+
+
+@media print {
+    body {
+        background-color: #fff;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .hero {
+        display: none;
+    }
+
+    main {
+        padding: 0;
+    }
+
+    section {
+        padding: 0;
+        margin-bottom: 0;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+@media print {
+    img {
+        height: auto;
+    }
+
+    .hero-btn {
+        display: none;
+    }
+
+    .navbar-nav {
+        display: none;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    main {
+        font-size: 1rem;
+    }
+
+    section {
+        break-inside: avoid;
+    }
+
+    h4 {
+        page-break-after: avoid;
+    }
+
+    p {
+        orphans: 4;
+        widows: 4;
+    }
+}
+
+
+.screen-reader-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.focus-visible {
+    outline: 2px solid #337ab7;
+    outline-offset: 2px;
+}
+
+
+
+
+/* Add a subtle shadow to all elements */
+* {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Make all images responsive */
 img {
     max-width: 100%;
-    height: auto;
+    height: auto;
 }
-/* Make all buttons responsive */
-button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
+
+/* Add a cursor pointer to all buttons */
+button, .hero-btn {
     cursor: pointer;
 }
 
-/* Add a hover effect to all buttons */
-button:hover {
-    background-color: #3e8e41;
-}
-
-/* Make all inputs responsive */
-input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-/* Add a focus effect to all inputs */
-input:focus {
-    border-color: #aaa;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Make all textareas responsive */
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Add a focus effect to all textareas */
-textarea:focus {
-    border-color: #aaa;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-/* Add a default background color to the page */
-body {
-    background-color: #f7f7f7;
-}
-
-/* Add a default text color to the page */
-body {
-    color: #333;
-}
-
-/* Make all headings bold */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-}
-
-/* Make all headings have a default color */
-h1, h2, h3, h4, h5, h6 {
-    color: #333;
-}
-
-/* Add a default margin to all headings */
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 20px;
-}
-
-/* Make all paragraphs have a default font size */
-p {
-    font-size: 16px;
-}
-
-/* Make all paragraphs have a default line height */
-p {
-    line-height: 1.5;
-}
-
-/* Make all paragraphs have a default margin */
-p {
-    margin-bottom: 20px;
-}
-
-/* Make the footer have a default background color */
-footer {
-    background-color: #333;
-}
-
-/* Make the footer text have a default color */
-footer {
-    color: #fff;
-}
-
-/* Add a default padding to the copyright section */
-.copyright {
-    padding: 10px;
-}
-
-/* Make the copyright text have a default color */
-.copyright {
-    color: #fff;
-}
-
-/* Make the copyright background have a default color */
-.copyright {
-    background-color: #333;
-}
-/* Add a default padding to all sections */
-section {
-    padding: 20px;
-}
-
-/* Make all sections have a default background color */
-section {
-    background-color: #fff;
-}
-
-/* Add a default border radius to all sections */
-section {
-    border-radius: 10px;
-}
-
-/* Add a default box shadow to all sections */
-section {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Make all sections have a default margin */
-section {
-    margin-bottom: 20px;
-}
-/* Add a default font size to the copyright text */
-.copyright {
-    font-size: 14px;
-}
-
-/* Make the copyright text have a default line height */
-.copyright {
-    line-height: 1.5;
-}
-
-/* Add a default margin to the copyright section */
-.copyright {
-    margin-top: 20px;
-}
-
-/* Make all social media links have a default color */
-.social-media-links a {
-    color: #337ab7;
-}
-
-/* Add a default transition effect to all social media links */
-.social-media-links a {
+/* Add a transition effect to all links */
+a {
     transition: color 0.2s ease;
 }
 
-/* Make all social media links have a default hover color */
-.social-media-links a:hover {
-    color: #23527c;
-}
-/* Add a default margin to all social media links */
-.social-media-links a {
-    margin-right: 20px;
+/* Make all sections have a consistent spacing */
+section {
+    margin-bottom: 4rem;
 }
 
-/* Make all social media links have a default font size */
-.social-media-links a {
-    font-size: 18px;
+/* Add a box shadow to the hero section */
+.hero {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Add a default padding to the dropdown menu */
-.dropdown-menu {
-    padding: 10px;
+/* Make the navbar sticky */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Make the dropdown menu have a default background color */
-.dropdown-menu {
-    background-color: #f9f9f9;
+/* Add a background color to the footer */
+footer {
+    background-color: #f7f7f7;
+    padding: 2rem;
+    text-align: center;
 }
 
-/* Add a default border to the dropdown menu */
-.dropdown-menu {
-    border: 1px solid #ccc;
 }
 
-/* Make the dropdown menu links have a default color */
-.dropdown-menu a {
-    color: #337ab7;
+
+
+
+}
 }
 
-@media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .navbar-brand {
-      margin-bottom: 10px;
-    }
-    .navbar-nav {
-      margin-left: 0;
-    }
-    .nav-item {
-      margin-bottom: 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hero {
-      height: 50vh;
-    }
-    .hero .headline {
-      font-size: 24px;
-    }
-    .hero .subheading {
-      font-size: 18px;
-    }
-  }
-  
-  
-
-  @media (max-width: 768px) {
-    main {
-      flex-direction: column;
-      align-items: center;
-    }
-    section {
-      margin-bottom: 20px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    footer {
-      padding: 10px;
-    }
-    .copyright {
-      font-size: 12px;
-    }
-  }
-  @media (max-width: 768px) {
-    .navbar {
-      position: relative;
-    }
-    .navbar-toggler {
-      display: block;
-    }
-    .navbar-collapse {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #f7f7f7;
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-    }
-    .navbar-collapse.show {
-      display: block;
-    }
-  }
-  
-        
