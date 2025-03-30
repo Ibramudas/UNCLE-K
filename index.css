@@ -559,3 +559,53 @@ section {
 .dropdown-menu a {
     color: #337ab7;
 }
+
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar-brand {
+      margin-bottom: 10px;
+    }
+    .navbar-nav {
+      margin-left: 0;
+    }
+    .nav-item {
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero {
+      height: 50vh;
+    }
+    .hero .headline {
+      font-size: 24px;
+    }
+    .hero .subheading {
+      font-size: 18px;
+    }
+  }
+  
+  
+
+  @media (max-width: 768px) {
+    main {
+      flex-direction: column;
+      align-items: center;
+    }
+    section {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    footer {
+      padding: 10px;
+    }
+    .copyright {
+      font-size: 12px;
+    }
+  }
+        
