@@ -10,38 +10,30 @@
 <body>
   <!-- Navbar Section -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <a class="navbar-brand" href="#">Caring is Healing</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="Service.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Services </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Elderly & Live-in Care</a>
-              <a class="dropdown-item" href="#">Extra Care</a>
-              <a class="dropdown-item" href="#">Become a Care Assistant</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="About.html">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacts.html">Contact Us</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
+  <div class="container">
+    <a class="navbar-brand" href="#">Caring is Healing</a>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="Service.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Services </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Elderly & Live-in Care</a>
+          <a class="dropdown-item" href="#">Extra Care</a>
+          <a class="dropdown-item" href="#">Become a Care Assistant</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About.html">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contacts.html">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
   <!-- Hero Section -->
   <section class="hero" style="background-image: url('healing.jpg');">
     <div class="container">
@@ -111,122 +103,4 @@
       </body>
       </html>
       
-      
-      And here is the updated CSS code:
-      
-      
-      /* Global Styles */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background-color: #f9f9f9;
-      }
-      
-      a {
-        text-decoration: none;
-        color: #337ab7;
-      }
-      
-      a:hover {
-        color: #23527c;
-      }
-      
-      /* Navbar Styles */
-      .navbar {
-        background-color: #337ab7;
-        color: #fff;
-        padding: 1rem;
-        text-align: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        border-bottom: 1px solid #23527c;
-      }
-      
-      .navbar .navbar-brand {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-right: 1rem;
-        color: #fff;
-        text-shadow: 0 0 10px #337ab7;
-      }
-      
-      .navbar .navbar-nav {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-      }
-      
-      .navbar .nav-item {
-        margin-right: 1rem;
-        margin-bottom: 0.5rem;
-      }
-      
-      .navbar .nav-link {
-        color: #fff;
-        transition: color 0.5s ease;
-        text-shadow: 0 0 10px #337ab7;
-      }
-      
-      .navbar .nav-link:hover {
-        color: #ccc;
-      }
-      
-      .navbar-toggler {
-        display: block !important;
-        background-color: #337ab7;
-        border: none;
-        padding: 0.5rem;
-        font-size: 1.5rem;
-        color: #fff;
-      }
-      
-      .navbar-toggler:hover {
-        background-color: #23527c;
-      }
-      
-      /* Responsive Navbar Styles */
-      @media only screen and (max-width: 768px) {
-        .navbar {
-          padding: 0.5rem;
-          display: block !important;
-        }
-        .navbar .navbar-brand {
-          font-size: 1.2rem;
-        }
-        .navbar .nav-item {
-          margin-bottom: 0.2rem;
-        }
-        .navbar .navbar-toggler {
-          margin-top: 0.5rem;
-        }
-        .navbar .collapse {
-          margin-top: 0.5rem;
-        }
-      }
-      
-      /* Hero Section Styles */
-      .hero {
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #fff;
-      }
-      
-      .hero .headline {
-      
+    
