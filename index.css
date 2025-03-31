@@ -363,5 +363,22 @@ footer {
     flex-basis: 100%;
   }
 }
-
+@media only screen and (max-width: 768px) {
+    .navbar {
+      padding: 0.5rem;
+    }
+    .navbar .navbar-brand {
+      font-size: 1.2rem;
+    }
+    .navbar .nav-item {
+      margin-bottom: 0.2rem;
+    }
+    .navbar .navbar-toggler {
+      margin-top: 0.5rem;
+    }
+    .navbar .collapse {
+      margin-top: 0.5rem;
+    }
+  }
+  
 /* End of CSS Code */
